@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class PageTable
+{
+	public static void main(String args[])
+	{
+	int prsize,pgno,fno,k=0;
+	float psize;
+	float pages;
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter program size in MB");
+	prsize=sc.nextInt();
+	System.out.println("enter page size in KB");
+	psize=sc.nextInt();
+	pages=((float)(prsize/psize))*1024;
+	System.out.println("no of pages:"+pages);
+	int ptable[]=new int[(int)pages];
+	for(int i=0;i<pages;i++)
+	{
+	ptable[i]=2*k;
+	k++;
+	}
+	System.out.println("enter page number:");
+	pgno=sc.nextInt();
+	fno=ptable[pgno-1];
+	System.out.println("frame no is:"+fno);
+	}
+}
